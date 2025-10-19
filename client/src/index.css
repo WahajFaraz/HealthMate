@@ -1,0 +1,122 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Healthcare Design System - Medical Blue & Wellness Green Theme */
+    --background: 210 20% 98%;
+    --foreground: 215 25% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 215 25% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 25% 15%;
+
+    /* Medical Blue - Trust & Professionalism */
+    --primary: 210 85% 48%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 210 85% 65%;
+
+    /* Wellness Green - Health & Vitality */
+    --secondary: 150 65% 45%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 210 20% 95%;
+    --muted-foreground: 215 15% 45%;
+
+    --accent: 35 90% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 85% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 215 20% 88%;
+    --input: 215 20% 88%;
+    --ring: 210 85% 48%;
+
+    --radius: 0.75rem;
+
+    /* Gradients for depth and visual interest */
+    --gradient-hero: linear-gradient(135deg, hsl(210 85% 48%), hsl(210 85% 65%));
+    --gradient-wellness: linear-gradient(135deg, hsl(150 65% 45%), hsl(150 65% 60%));
+    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 100%), hsl(210 20% 98%));
+    
+    /* Shadows for cards and elevation */
+    --shadow-sm: 0 2px 8px -2px hsl(210 85% 48% / 0.08);
+    --shadow-md: 0 8px 20px -4px hsl(210 85% 48% / 0.12);
+    --shadow-lg: 0 16px 40px -8px hsl(210 85% 48% / 0.15);
+    --shadow-glow: 0 0 40px hsl(210 85% 65% / 0.3);
+
+    /* Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 215 25% 15%;
+    --sidebar-primary: 210 85% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 20% 95%;
+    --sidebar-accent-foreground: 215 25% 15%;
+    --sidebar-border: 215 20% 88%;
+    --sidebar-ring: 210 85% 48%;
+  }
+
+  .dark {
+    --background: 215 30% 8%;
+    --foreground: 210 20% 95%;
+
+    --card: 215 25% 12%;
+    --card-foreground: 210 20% 95%;
+
+    --popover: 215 25% 12%;
+    --popover-foreground: 210 20% 95%;
+
+    --primary: 210 85% 55%;
+    --primary-foreground: 215 30% 8%;
+    --primary-glow: 210 85% 70%;
+
+    --secondary: 150 65% 50%;
+    --secondary-foreground: 215 30% 8%;
+
+    --muted: 215 25% 15%;
+    --muted-foreground: 215 15% 60%;
+
+    --accent: 35 90% 60%;
+    --accent-foreground: 215 30% 8%;
+
+    --destructive: 0 85% 65%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 215 25% 20%;
+    --input: 215 25% 20%;
+    --ring: 210 85% 55%;
+
+    --shadow-sm: 0 2px 8px -2px hsl(210 85% 20% / 0.4);
+    --shadow-md: 0 8px 20px -4px hsl(210 85% 20% / 0.5);
+    --shadow-lg: 0 16px 40px -8px hsl(210 85% 20% / 0.6);
+
+    --sidebar-background: 215 25% 10%;
+    --sidebar-foreground: 210 20% 95%;
+    --sidebar-primary: 210 85% 55%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 215 25% 15%;
+    --sidebar-accent-foreground: 210 20% 95%;
+    --sidebar-border: 215 25% 20%;
+    --sidebar-ring: 210 85% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
